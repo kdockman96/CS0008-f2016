@@ -9,5 +9,5 @@ print('------------------------')
 # Print the speeds
 for htime in range(1, time + 1):
     distance = speed * htime
-    print(time, "\t\t", format(distance, '.1f'))
+    print(htime, "\t\t", format(distance, '.1f'))
 
