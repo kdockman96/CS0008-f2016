@@ -7,7 +7,7 @@ print('Hour\tDistance Traveled')
 print('------------------------')
 
 # Print the speeds
-for time in range(1, time + 1):
-    distance = speed * time
-    print(time, '\t\t', format(distance, '.1f'))
+for htime in range(1, time + 1):
+    distance = speed * htime
+    print(time, "\t\t", format(distance, '.1f'))
 
