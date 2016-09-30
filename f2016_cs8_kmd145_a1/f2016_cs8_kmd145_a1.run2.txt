@@ -1,0 +1,13 @@
+/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5 /Users/karadockman/Documents/CS0008/CS0008-f2016/f2016_cs8_kmd145_a1/f2016_cs8_kmd145_a1.py
+Which system do you want to use? USC
+How many miles were driven? 40
+How many gallons of gasoline were used? 15
+
+                                USC            Metric
+Distance ______________:     40.000 miles      64.373 Km
+Gas ___________________:     15.000 gallons    56.781 Liters
+Consumption ___________:      2.667 mpg        88.206 1/100Km
+
+Gas Consumption Rating : Extremely Poor
+
+Process finished with exit code 0

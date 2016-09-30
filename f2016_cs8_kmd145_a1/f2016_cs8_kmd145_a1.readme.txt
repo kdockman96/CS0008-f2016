@@ -1,0 +1,18 @@
+I first asked the user which system he or she wanted to use in order to provide a base for the rest of the program.
+Based on that input, I used an IF-ELSE statement to ask the user the distance driven and amount of gas used. The
+reason I did that was to get the original units first, and then convert those numbers into the other unit system. I
+converted the string output from the input function into a float because I thought it would provide more accuracy.
+Although the else statement is not completely necessary, I decided to include it so the user would know to enter only
+one of two options. The next step was to write the formulas for the conversion of one units system to the other. After
+a few trial and error attempts, I figured out that I had to put the conversion formulas in the block of statements
+following if/elif. If I did not do this, then depending on the unit system used, the variables were not defined.
+Next, I entered the formulas for miles per gallon and 1/100km. Since the results had to be formatted a certain way, I
+googled how to format a string and I used the format I saw online, with entering the spaces necessary to make sure
+the numbers and strings lined up correctly. Regarding the actual output numbers, I used the format function to ensure
+that the minimum field width was maintained if a six-digit number was entered into the program. For the second
+column of numbers, the number before the decimal point which specifies the field width is not the same for all three
+categories. However, the decimal points lined up. The last step was to rate the consumption of gas using the
+ranges provided in the prompt. I again used an IF-ELSE statement for this task. The else statement in this instance
+is not necessary, but it serves the purpose of letting the user know there is an error just in case anything unexpected
+happens.
+
