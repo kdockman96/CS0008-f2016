@@ -9,5 +9,5 @@ total_sales = float(input("Enter the projected amount of total sales: "))
 profit = total_sales * 0.23
 
 # Display the profit made
-print('The profit made from projected total sales is', format(profit,',.2f'))
+print('The profit made from projected total sales is $' , format(profit,',.2f'), sep='')
 

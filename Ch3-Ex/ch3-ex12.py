@@ -13,6 +13,7 @@ elif packages >= 50 and packages <= 99:
 elif packages >= 100:
     discount = .40 * price
 else:
+    discount = 0
     print('There is no quantity discount.')
 
 # Subtract the discount from the sales price
