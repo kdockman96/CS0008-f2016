@@ -10,7 +10,7 @@ total = 0.01
 
 # Print the days and the salary for each day
 for days in range(1, days+1):
-    salary = days * 0.01
+    salary = 2**(days-1) * 0.01
     print(days, '\t\t', '$', salary, sep='')
     total += salary
 
