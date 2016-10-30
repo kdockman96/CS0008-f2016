@@ -3,6 +3,7 @@ def main():
 
     # Initialize accumulator variable for partial total lines
     PTL = 0
+    # Initialize accumulator variable for partial distance
     PD = 0
     # Initialize accumulator variable for total number of lines
     TL = 0
@@ -51,9 +52,13 @@ def main():
 # Define the processFile, using file object as an argument (since it is the way to
 # access the actual contents of the file)
 def processFile(FO):
+    # Initialize accumulator variable for partial total lines
     PTL = 0
+    # Initialize accumulator variable for partial distance
     PD = 0
+    # Initialize accumulator variable for total number of lines
     TL = 0
+    # Initialize accumulator variable for total distance run
     TD = 0
     # Use a for loop to perform specific operations to extract distance from the string
     # in the file
