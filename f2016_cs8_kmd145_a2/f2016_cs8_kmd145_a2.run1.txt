@@ -1,0 +1,21 @@
+/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5 /Users/karadockman/Documents/CS0008/CS0008-f2016/f2016_cs8_kmd145_a2/f2016_cs8_kmd145_a2.py
+Please provide the file name : f2016_cs8_a2.data.1.csv
+
+File read                    : f2016_cs8_a2.data.1.csv
+Partial total # of lines     :         50
+Partial distance run         :   2298.967
+
+Please provide the file name : f2016_cs8_a2.data.2.csv
+
+File read                    : f2016_cs8_a2.data.2.csv
+Partial total # of lines     :         50
+Partial distance run         :   2195.061
+
+Please provide the file name : quit
+
+File read                    : quit
+
+Total # of lines             :        100
+Total distance run           :   4494.027
+
+Process finished with exit code 0

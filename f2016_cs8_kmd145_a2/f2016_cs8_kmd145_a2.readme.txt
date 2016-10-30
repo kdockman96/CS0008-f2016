@@ -1,0 +1,32 @@
+I decided to enclose the main body of the program into a main function to make it easier to read. The first thing I did
+was create variables that kept running totals of partial total lines, partial distance, total number of lines, and total
+distance. Setting them all equal to 0 ensures that the accumulation of values will be correct. The next thing to do is
+to ask the user the name of the file they want to enter. The input should be a file name with an extension (.csv) at the
+end. Displaying the file to be read follows the required format of the output. I created a main while loop to test the
+input entered by the user. This loop will only iterate if a user specifically wants the contents of a file to be read.
+The loop will not iterate if the user enters quit. The program will then exit if quit is entered. I created an if/then
+statement to differentiate between the sample data files because otherwise only one file would have been read. Opening
+the file is the next step, but the file would not open if the user only entered the file name. Thus, a filepath needed
+to be specified that that tells the computer where the sample data files are located. Opening the files in read mode is
+necessary since I do not want to write data to the file, but read data as input to the subsequent operations to be
+performed on the values in the file.
+
+Calling the processFile function allows the operations to be performed on the contents of the file. I also placed all
+the accumulator variables inside this function otherwise the python interpreter told me that I used the variables before
+assigning them. I used a for loop to perform a number of operations on the lines in the file. Stripping the newline
+character and splitting the line into name and distance along with converting distance from a string to a float allows
+math to be performed on the distance portion. Distance is added to partial distance and as each line is read, it
+accumulates in the PTL variable. Returning PD and PTL allows the total outputs to be calculated.
+
+Having two variables reference the processFile function is essential since that function will be returning two values
+(PD and PTL). Printing the partial output in the printKV function makes it much easier to format
+the output because all the values will be aligned and if something needs to be changed regarding formatting, I can do it
+once. I set klen = 25 so it follows the format on the instructions. Strings should have a minimum field width of 20
+spaces, floats should have 10 spaces with rounding to three decimal places, and integers should have 10 spaces.
+
+Closing the file is the next step, so the computer won't erase the contents. Adding the partial distance to total
+distance and  partial total of lines to the total number of lines will sum all the distances in all the files read
+by the program and all lines in the files read by the program. The program next asks the user to enter another file name
+if desired or enter quit to exit the program. I first put the total output inside the while loop, but that resulted in
+partial output, total output, and then another partial output. Placing it outside the loop follows the required format.
+Again calling the printKV function allows consistent formatting.
