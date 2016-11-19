@@ -1,0 +1,33 @@
+This program processes files inside of a master file in order to extract specific output. The output of this
+program is to be stored in an output file for easier access by the user. I started by initializing and setting
+to 0 all of the necessary accumulator and counter variables. I then created an empty global dictionary in order
+to store all the dictionaries that were derived from the files contained within the master file. I also opened
+an output file to have on hand when it is needed later in the program. I assigned the master file to a variable for
+easier access. I opened the masterfile and read the lines in the file, which are the individual files. However, I
+cannot get the individual files open to read them. I am not sure how to get around that but I will continue
+to describe what I would do next. I also stripped the newline character off them. I created an empty list to put the
+individual files in. I created a loop to iterate through the files. I added the distances together to find the total
+distance using the sum function. First, I stripped the newline character and split the line into name and distance.
+Converting the distance from a string to a float allowed me to add the distances up to find the total distance. For
+each file, it is necessary to remove the header so it is not counted in any output. As long as the the line is not a
+header, then the data is appended. Closing the file is the next step.
+
+Another loop is necessary in order to find the other required output. I created a function to process the lines in
+each file in the same way. I iterated through the file to convert the keys to string and values to floats. If the
+key already exists, append the distance to the list of distances. If not, then add the key and value to the
+dictionary. I added up the number of lines in the file to get the total lines later. I then closed the file.
+The function returns a dictionary and the number of lines in each file. All the dictionaries
+are concatenated to the global dictionary so it contains everything. I counted the number of files and the total number
+of lines.
+
+Next is looping through the keys in the dictionary. I used the get method to call a key and then getting a value
+associated with that key. I made sure that the values associated with the keys are composed of a list. I looped through
+the value list in order to add up the distances for each individual. I also added up the number of participants using
+a counter variable. I also created max and min functions to find the minimum and maxiumum distances.
+
+Next, I attempted to write the individual distances and who appeared more than once and how many times into an output
+file.
+
+Inside the min and max functions, I used the values function to get a sequence of values to compare. I used the key
+method to get the keys associated with the values. I then returned the names of the participants who ran the minimum
+and maximum distances along with the values of the minimum and maximum distances.
