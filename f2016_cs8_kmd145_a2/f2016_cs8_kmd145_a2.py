@@ -1,3 +1,8 @@
+#
+# MN: header with user, instructor and course info is missing
+#
+
+
 # Define the main function
 def main():
 
@@ -18,15 +23,22 @@ def main():
     # Create a while loop to process the file if the user desires and to exit
     # the loop if the user says "quit"
     while file and file != 'quit' and file != 'Quit' and file != 'Q' and file != 'q':
-        # Open the file using a file object, in the read mode
-        if file == 'f2016_cs8_a2.data.1.csv':
-            FO = open(r'/Users/karadockman/Downloads/f2016_cs8_a2.data.1.csv', 'r')
-        elif file == 'f2016_cs8_a2.data.2.csv':
-            FO = open(r'/Users/karadockman/Downloads/f2016_cs8_a2.data.2.csv', 'r')
+        # MN: with the following structure you run into issues when the user provides different data files
+        #     or files with full path, like I did
+        ## Open the file using a file object, in the read mode
+        #if file == 'f2016_cs8_a2.data.1.csv':
+        #    FO = open(r'/Users/karadockman/Downloads/f2016_cs8_a2.data.1.csv', 'r')
+        #elif file == 'f2016_cs8_a2.data.2.csv':
+        #    FO = open(r'/Users/karadockman/Downloads/f2016_cs8_a2.data.2.csv', 'r')
+        #
+        # MN: why not doing just the folllowing:
+        FO = open(file,'r')
+
         # Since processFile function returns two values (partial distance and partial
         # total lines, these two values need to be on the left of the = operator in the
         # assignment statement when the function is called
         PD, PTL = processFile(FO)
+
         # Print the partial output, using the printKV function call
         # <description> : <value>
         printKV('Partial total # of lines', PTL)
