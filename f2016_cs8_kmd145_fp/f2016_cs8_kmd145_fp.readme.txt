@@ -1,0 +1,51 @@
+First I defined the class "Participant" and the associated data attributes and methods. It is necessary to define
+the __init__ method since it is a required method for every class. Each data attribute must be initialized. However,
+the distance attribute can only be defined if it is above 0. Runs is then set to 1 since if distance is above 0, there
+must be at least 1 run. Add distance and add distances method essentially do the same thing, only the former is adding
+one distance to the distance attribute, while the latter is adding more than one to the distance attribute. Runs is a
+counter variable as well. Next the accessor methods are defined. The str method returns the state of the object at
+any given time, so it is necessary to format the name, runs, and total distance according to the requirements in the
+prompt. The last method is to convert to csv since the data files are originally in the csv format.
+
+The getDataFromFile function reads the lines of the files, removes the header, and splits the lines into name and
+distance. A dictionaryis used to capture the name and distance into their respective keys and values in the output file.
+The output file consists of a list of dictionaries, since each participant needs to have their name and their
+distance(s) as an entry to the dictionary. An output list is created which is then used to write to the output file.
+Opening each file in the master file and reading the lines within it, except for the header, allows the user to see
+how many entries are in each file. For each line, the '\n' character needs to be removed off the end of the line and
+name and distance needs to be split so the separate operations can be performed on each. Indexing is used to remove
+unnecessary spaces and convert distance to a float before appending it to the output list. The function ends by
+returning the output that was entered.
+
+The input function is used to ask for a particular data file from the user. Again it is necessary to remove the newline
+character from the end of each line in the master file so the program can correctly read the file names. If the file is
+invalid or cannot be found, a try/except statement is used to alert the user.
+
+RawData is a list of three lists which contains the dictionaries with data from each file. So file 1 is the first
+element, file 2 is the second element, and so on. Number of files read is equivalent to the number of elements in
+dataFiles, which is three. The total number of lines is equivalent to the sum of the second item in each item of
+rawData. The len() function is used in both cases. Total distance run is equal to the sum of the "distance" elements of
+the items in rawData.
+
+An empty participant dictionary is created to hold the names as keys and the list of distances as values. An if state-
+ment is used to check if the name already exists within the dictionary. If it is not found, a new entry is created.
+The addDistance method is then used to add all the distances for each participant.
+
+Min and max distance variables need to be initialized first in order to compare each entry to see which participant has
+the highest/lowest distance. Total distance run is calculated for each participant next. The class method getDistance
+is used to retrieve the distance total for each participant. Each distance needs to be totaled for each person so the
+program is able to see which participant ran the highest or lowest distance. If the participant being evaluated has
+a lower min distance than the current one, min distance is updated. If the participant being evaluated has a higher max
+distance than the current one, max distance is updated.
+
+Next, get the number of runs for each participant, which is the number of appearances for each participant object. The
+getRuns method is used for this purpose. If the participant does not already appear, then their entry is added to the
+appearances dictionary. The total number of participants is equivalent to the length of the participants dictionary.
+The total number of participants with multiple records uses the len function along with the participants dictionary and
+values method. Extracting the participants with two or more runs allows the program to the count the number of elements
+in the list with the len function.
+
+The output is displayed according to the required format with the necessary spacing. Finally the output file is created
+and the name, runs, and total distance is written to this file. A newline space needs to be added as well. The data
+is written from the participants dictionary and here the tocsv class method is used in order to convert the content
+to csv. Closing the output file is the last step.
